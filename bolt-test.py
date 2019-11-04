@@ -3,10 +3,10 @@
 
 import time
 
-from neo4j.v1 import GraphDatabase, basic_auth, TRUST_ON_FIRST_USE, CypherError
+from neo4j import GraphDatabase, basic_auth, TRUST_ON_FIRST_USE, CypherError
 
 driver = GraphDatabase.driver("bolt://localhost",
-                              auth=basic_auth("neo4j", "neo4j"),
+                              auth=basic_auth("neo4j", "test"),
                               encrypted=False,
                               trust=TRUST_ON_FIRST_USE)
 
